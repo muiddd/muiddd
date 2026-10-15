@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="Karakter berjalan">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#e0f2fe"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cloud-layer { animation: clouds 40s linear infinite; }
+    .hill-layer  { animation: hills 12s linear infinite; }
+    .ground-layer{ animation: ground 1s linear infinite; }
+    .char        { animation: bob 0.5s ease-in-out infinite; }
+    .limb        { transform-box: fill-box; transform-origin: 50% 0%; }
+    .leg-a, .arm-b { animation: swing 0.5s ease-in-out infinite alternate; }
+    .leg-b, .arm-a { animation: swing 0.5s ease-in-out infinite alternate-reverse; }
+    .sun         { animation: pulse 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+    @keyframes clouds { from { transform: translateX(0); } to { transform: translateX(-800px); } }
+    @keyframes hills  { from { transform: translateX(0); } to { transform: translateX(-400px); } }
+    @keyframes ground { from { transform: translateX(0); } to { transform: translateX(-100px); } }
+    @keyframes swing  { from { transform: rotate(-35deg); } to { transform: rotate(35deg); } }
+    @keyframes bob    { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+    @keyframes pulse  { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+  </style>
+
+  <!-- Langit -->
+  <rect width="800" height="200" fill="url(#sky)"/>
+  <circle class="sun" cx="700" cy="45" r="22" fill="#fde047"/>
+
+  <!-- Awan -->
+  <g class="cloud-layer" fill="#ffffff" opacity="0.9">
+    <g id="clouds">
+      <ellipse cx="120" cy="45" rx="32" ry="12"/><ellipse cx="145" cy="38" rx="22" ry="10"/>
+      <ellipse cx="420" cy="30" rx="36" ry="12"/><ellipse cx="445" cy="24" rx="22" ry="9"/>
+      <ellipse cx="640" cy="60" rx="28" ry="10"/><ellipse cx="662" cy="54" rx="18" ry="8"/>
+    </g>
+    <g transform="translate(800 0)">
+      <ellipse cx="120" cy="45" rx="32" ry="12"/><ellipse cx="145" cy="38" rx="22" ry="10"/>
+      <ellipse cx="420" cy="30" rx="36" ry="12"/><ellipse cx="445" cy="24" rx="22" ry="9"/>
+      <ellipse cx="640" cy="60" rx="28" ry="10"/><ellipse cx="662" cy="54" rx="18" ry="8"/>
+    </g>
+  </g>
+
+  <!-- Bukit -->
+  <g class="hill-layer">
+    <g fill="#86efac">
+      <ellipse cx="100" cy="165" rx="120" ry="45"/><ellipse cx="300" cy="165" rx="90" ry="28"/>
+      <ellipse cx="500" cy="165" rx="120" ry="45"/><ellipse cx="700" cy="165" rx="90" ry="28"/>
+      <ellipse cx="900" cy="165" rx="120" ry="45"/><ellipse cx="1100" cy="165" rx="90" ry="28"/>
+      <ellipse cx="1300" cy="165" rx="120" ry="45"/><ellipse cx="1500" cy="165" rx="90" ry="28"/>
+    </g>
+  </g>
+
+  <!-- Tanah -->
+  <rect y="160" width="800" height="40" fill="#65a30d"/>
+  <rect y="160" width="800" height="5" fill="#4d7c0f"/>
+  <g class="ground-layer" fill="#4d7c0f">
+    <rect x="20"  y="176" width="24" height="4" rx="2"/><rect x="70"  y="188" width="16" height="4" rx="2"/>
+    <rect x="120" y="176" width="24" height="4" rx="2"/><rect x="170" y="188" width="16" height="4" rx="2"/>
+    <rect x="220" y="176" width="24" height="4" rx="2"/><rect x="270" y="188" width="16" height="4" rx="2"/>
+    <rect x="320" y="176" width="24" height="4" rx="2"/><rect x="370" y="188" width="16" height="4" rx="2"/>
+    <rect x="420" y="176" width="24" height="4" rx="2"/><rect x="470" y="188" width="16" height="4" rx="2"/>
+    <rect x="520" y="176" width="24" height="4" rx="2"/><rect x="570" y="188" width="16" height="4" rx="2"/>
+    <rect x="620" y="176" width="24" height="4" rx="2"/><rect x="670" y="188" width="16" height="4" rx="2"/>
+    <rect x="720" y="176" width="24" height="4" rx="2"/><rect x="770" y="188" width="16" height="4" rx="2"/>
+    <rect x="820" y="176" width="24" height="4" rx="2"/><rect x="870" y="188" width="16" height="4" rx="2"/>
+  </g>
+
+  <!-- Bayangan -->
+  <ellipse cx="152" cy="162" rx="22" ry="4" fill="#000" opacity="0.18"/>
+
+  <!-- Karakter -->
+  <g class="char">
+    <!-- lengan belakang -->
+    <rect class="limb arm-a" x="148" y="104" width="8" height="24" rx="4" fill="#f59e0b"/>
+    <!-- kaki belakang -->
+    <rect class="limb leg-b" x="148" y="132" width="9" height="28" rx="4" fill="#1e3a8a"/>
+    <!-- badan -->
+    <rect x="138" y="100" width="28" height="36" rx="9" fill="#3b82f6"/>
+    <!-- kaki depan -->
+    <rect class="limb leg-a" x="148" y="132" width="9" height="28" rx="4" fill="#1d4ed8"/>
+    <!-- kepala -->
+    <circle cx="152" cy="86" r="16" fill="#fcd9b6"/>
+    <!-- topi -->
+    <path d="M136 84 Q136 66 152 66 Q168 66 168 84 Z" fill="#ef4444"/>
+    <rect x="160" y="80" width="16" height="5" rx="2.5" fill="#dc2626"/>
+    <!-- mata -->
+    <circle cx="159" cy="89" r="2.2" fill="#1f2937"/>
+    <!-- lengan depan -->
+    <rect class="limb arm-b" x="148" y="104" width="8" height="24" rx="4" fill="#fbbf24"/>
+  </g>
+</svg>
