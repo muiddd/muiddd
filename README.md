@@ -14,10 +14,9 @@ To me, good products come from clear communication. I listen closely to what peo
 * 👥  I'm looking to collaborate on interesting project
 ###
 
-<picture data-importer="pacman">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muiddd/muiddd/pacman-output/galaga-contribution-graph-dark.svg?game=galaga">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muiddd/muiddd/pacman-output/galaga-contribution-graph.svg?game=galaga">
-  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/muiddd/muiddd/pacman-output/galaga-contribution-graph.svg?game=galaga">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muiddd/muiddd/output/github-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muiddd/muiddd/output/github-snake.svg">
+  <img alt="GitHub contribution graph animation" src="https://raw.githubusercontent.com/muiddd/muiddd/output/github-snake.svg">
 </picture>
-
 ###
