@@ -19,4 +19,3 @@ To me, good products come from clear communication. I listen closely to what peo
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muiddd/muiddd/output/github-snake.svg">
   <img alt="GitHub contribution graph animation" src="https://raw.githubusercontent.com/muiddd/muiddd/output/github-snake.svg">
 </picture>
-###
